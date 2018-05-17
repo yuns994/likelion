@@ -1,0 +1,7 @@
+<p>제목 : <%= @title %></p>
+<p>내용 : <%= @content%></p>
+
+<br><%= link_to index_path do %>
+<!-- a href와의 차이는 link to는 루비 문법임.-->
+    <button>메인으로 가기</button>
+<% end %>

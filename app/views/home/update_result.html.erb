@@ -1,0 +1,8 @@
+<h1>수정이 완료되었습니다.</h1>
+<p>제목 : <%= @title %></p>
+<p>내용 : <%= @content%></p>
+
+<br><%= link_to index_path do %>
+<!-- a href와의 차이는 link to는 루비 문법임.-->
+    <button>메인으로 가기</button>
+<% end %>

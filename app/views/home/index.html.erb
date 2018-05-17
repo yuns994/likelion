@@ -1,0 +1,26 @@
+<a href="write">
+    <button><h1>글쓰러 가기</h1></button>
+    </a>
+    
+<% @every_post.each do |p| %>
+    <br>게시물 번호 : <%= p.id%>
+    <br>제목 : <%= p.title %>
+    <br>내용 : <%= p.content %>
+    <br>등록일 : <%= p.created_at %>
+    
+    <br><%= link_to destroy_path(post_id: p.id) do %>
+    <!--ㄴ은 <a href="/destroy/<%=p.id%>">삭제하기</a>  와 같다-->
+    <button>
+        삭제하기
+    </button>
+    <% end %>
+    
+    <%= link_to update_path(p) do %>
+    <button>
+        수정하기
+    </button>
+    <% end%>
+    
+    
+    <hr>
+<% end %>
